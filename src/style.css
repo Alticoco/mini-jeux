@@ -108,3 +108,40 @@ table.stats th, table.stats td { text-align: left; padding: 6px 8px; border-bott
 .morpion-grille { grid-template-columns: repeat(3, 1fr); width: min(360px, 90vw); }
 .morpion-case { font-size: 3rem; }
 .case.gagnante { background: var(--ok); color: #fff; }
+
+/* Puissance 4 */
+.p4-plateau { display: flex; gap: 6px; background: #2a56c6; padding: 10px; border-radius: 14px; box-shadow: var(--ombre); }
+.p4-colonne { display: flex; flex-direction: column; gap: 6px; background: transparent; border: none; padding: 0; cursor: pointer; border-radius: 30px; }
+.p4-colonne:hover:not(:disabled) { background: rgba(255, 255, 255, 0.18); }
+.p4-colonne:disabled { cursor: default; }
+.p4-jeton { width: min(52px, 10vw); height: min(52px, 10vw); border-radius: 50%; background: var(--fond); box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.35); }
+.p4-jeton.j1 { background: #e0362d; }
+.p4-jeton.j2 { background: #f5c518; }
+.p4-jeton.gagnant { outline: 4px solid #fff; }
+
+/* Snake */
+.snake-canvas { border: 2px solid var(--bord); border-radius: 10px; max-width: 100%; height: auto; }
+
+/* Démineur */
+.defile-x { max-width: 100%; overflow-x: auto; padding-bottom: 4px; }
+.demineur-grille { gap: 2px; }
+.dem-case { border-radius: 4px; font-size: 1rem; background: var(--surface2); }
+.dem-case.ouverte { background: var(--surface); cursor: default; }
+.dem-case.mine { background: var(--mal); }
+.n1 { color: #2a56c6; } .n2 { color: #2e9e5b; } .n3 { color: #d6453d; } .n4 { color: #6a3fc6; }
+.n5 { color: #a8571a; } .n6 { color: #1a9aa8; } .n7 { color: var(--texte); } .n8 { color: var(--muet); }
+
+/* 2048 */
+.g2048-plateau { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; background: #8d7f73; padding: 8px; border-radius: 12px; width: min(400px, 92vw); touch-action: none; user-select: none; }
+.g2048-tuile { aspect-ratio: 1; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: clamp(1.1rem, 5vw, 2rem); background: #b9ab9d; color: #5b4f45; }
+.g2048-tuile.t2 { background: #eee4da; } .g2048-tuile.t4 { background: #ede0c8; }
+.g2048-tuile.t8 { background: #f2b179; color: #fff; } .g2048-tuile.t16 { background: #f59563; color: #fff; }
+.g2048-tuile.t32 { background: #f67c5f; color: #fff; } .g2048-tuile.t64 { background: #f65e3b; color: #fff; }
+.g2048-tuile.t128 { background: #edcf72; color: #fff; } .g2048-tuile.t256 { background: #edcc61; color: #fff; }
+.g2048-tuile.t512 { background: #edc850; color: #fff; } .g2048-tuile.t1024 { background: #edc53f; color: #fff; font-size: clamp(1rem, 4vw, 1.6rem); }
+.g2048-tuile.t2048, .g2048-tuile.t4096 { background: #edc22e; color: #fff; font-size: clamp(1rem, 4vw, 1.6rem); }
+
+/* Taquin */
+.taquin-grille { gap: 6px; }
+.taquin-tuile { font-size: 1.6rem; background: var(--accent); color: var(--accent-texte); border-color: var(--accent); }
+.taquin-vide { aspect-ratio: 1; }
