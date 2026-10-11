@@ -20,3 +20,4 @@
 .mj-tuile.car { color: #c0392b; } .mj-tuile.bam { color: #1e8449; } .mj-tuile.cer { color: #1f5fbf; }
 .mj-tuile.vent { color: #222; } .mj-tuile.dragon { color: #8e44ad; }
 .mj-tuile.fleur { color: #d6409f; } .mj-tuile.saison { color: #d9822b; }
+.defile-x { overflow-y: hidden; }

@@ -103,7 +103,7 @@ function alphabeta(p: Plateau, prof: number, alpha: number, beta: number, tour: 
   return v;
 }
 
-const PROFONDEUR: Record<Difficulte, number> = { facile: 1, moyen: 3, difficile: 5 };
+const PROFONDEUR: Record<Difficulte, number> = { facile: 1, moyen: 2, difficile: 4 };
 
 export function coupOrdi(p: Plateau, moi: 1 | 2, niveau: Difficulte, rng: Rng = Math.random): number {
   const coups = coupsLegaux(p, moi);

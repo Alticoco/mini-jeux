@@ -52,7 +52,7 @@ export const jeuMahjong = fabrique<Etat>({
     const e = h.etat;
     const j = e.jeu;
     const largeur = 12 * L + 40;
-    const plateau = el('div', { class: 'mj-plateau', style: `width:${largeur}px;height:${7 * H + 30}px` });
+    const plateau = el('div', { class: 'mj-plateau', style: `width:${largeur}px;height:${7 * H + 50}px` });
     // les couches hautes sont dessinées après les basses
     const ordre = POSITIONS.map((p, i) => ({ p, i })).sort((a, b) => a.p.z - b.p.z);
     for (const { p, i } of ordre) {
