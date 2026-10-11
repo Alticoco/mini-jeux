@@ -3,7 +3,7 @@ import { melanger, type Rng } from './alea';
 
 export type Couleur = 'pique' | 'coeur' | 'carreau' | 'trefle';
 export interface Carte {
-  rang: number; // 1 (as) à 13 (roi)
+  rang: number; // 1 (as) à 13 (roi) ; 0 = joker
   couleur: Couleur;
 }
 
@@ -15,10 +15,11 @@ export function estRouge(c: Couleur): boolean {
 }
 
 export function nomRang(r: number): string {
-  return r === 1 ? 'A' : r === 11 ? 'V' : r === 12 ? 'D' : r === 13 ? 'R' : String(r);
+  return r === 0 ? '★' : r === 1 ? 'A' : r === 11 ? 'V' : r === 12 ? 'D' : r === 13 ? 'R' : String(r);
 }
 
 export function nomCarte(c: Carte): string {
+  if (c.rang === 0) return 'Joker';
   const rangs: Record<number, string> = { 1: 'As', 11: 'Valet', 12: 'Dame', 13: 'Roi' };
   const noms: Record<Couleur, string> = { pique: 'pique', coeur: 'cœur', carreau: 'carreau', trefle: 'trèfle' };
   return `${rangs[c.rang] ?? c.rang} de ${noms[c.couleur]}`;
@@ -39,13 +40,14 @@ export function identique(a: Carte, b: Carte): boolean {
 /** Élément DOM d'une carte (face visible ou dos). Dimensionnée par la variable CSS --zoom-cartes. */
 export function elCarte(c: Carte | null, attrs: Record<string, string | number | boolean | EventListener | undefined> = {}): HTMLElement {
   if (!c) return el('div', { class: 'carte dos', 'aria-label': 'Carte face cachée', ...attrs });
-  const coin = `${nomRang(c.rang)}${SYMBOLE[c.couleur]}`;
+  const joker = c.rang === 0;
+  const coin = joker ? '★' : `${nomRang(c.rang)}${SYMBOLE[c.couleur]}`;
   const { class: extra, ...reste } = attrs;
   return el(
     'div',
-    { class: `carte${estRouge(c.couleur) ? ' rouge' : ''}${extra ? ` ${extra}` : ''}`, 'aria-label': nomCarte(c), ...reste },
+    { class: `carte${!joker && estRouge(c.couleur) ? ' rouge' : ''}${extra ? ` ${extra}` : ''}`, 'aria-label': nomCarte(c), ...reste },
     el('span', { class: 'haut' }, coin),
-    el('span', { class: 'centre' }, SYMBOLE[c.couleur]),
+    el('span', { class: 'centre' }, joker ? '🃏' : SYMBOLE[c.couleur]),
     el('span', { class: 'bas' }, coin),
   );
 }

@@ -25,8 +25,14 @@ import { jeuSokoban } from './sokoban/jeu';
 import { jeuMotsMeles } from './motsmeles/jeu';
 import { jeuMotus } from './motus/jeu';
 
+import { jeuReversi } from './reversi/jeu';
+import { jeuDames } from './dames/jeu';
+import { jeuHuitAmericain } from './huitamericain/jeu';
+import { jeuMenteur } from './menteur/jeu';
+import { jeuMistigri, jeuPouilleux } from './paires/jeu';
+
 /** Ordre d'affichage dans le menu (par famille). */
 [
-  jeuKlondike, jeuBataille, jeuSudoku, jeuDemineur, jeu2048, jeuTaquin, jeuPendu, morpion, jeuP4, jeuSnake,
+  jeuKlondike, jeuBataille, jeuHuitAmericain, jeuMenteur, jeuMistigri, jeuPouilleux, jeuDames, jeuReversi, jeuSudoku, jeuDemineur, jeu2048, jeuTaquin, jeuPendu, morpion, jeuP4, jeuSnake,
   jeuHanoi, jeuLightsOut, jeuBinairo, jeuPicross, jeuSokoban, jeuMotsMeles, jeuMotus, jeuFloodIt, jeuPFC, jeuPileFace, jeuMemory, jeuSimon, jeuYams, jeuFarkle,
 ].forEach(enregistrerJeu);

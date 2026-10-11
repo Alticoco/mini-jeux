@@ -1,0 +1,36 @@
+/* V2 : jeux de cartes et de plateau contre l'ordi */
+.main-cartes { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center; }
+.main-cartes .carte { margin-left: calc(-18px * var(--zoom-cartes)); }
+.main-cartes .carte:first-child { margin-left: 0; }
+.main-cartes .carte.jouable { transform: translateY(-8px); }
+.main-cartes .carte.grisee { opacity: 0.55; }
+.main-cartes .carte.choisie { transform: translateY(-16px); }
+.centre-table { display: flex; flex-direction: column; align-items: center; gap: 12px; }
+.blanc { color: #fff; font-size: 1rem; }
+.gros { color: #fff; font-weight: 700; }
+.pioche-btn { position: relative; background: none; border: none; padding: 0; cursor: pointer; }
+.pioche-btn:disabled { cursor: default; opacity: 0.85; }
+.pioche-btn.conseillee .carte { outline: 3px solid #ffcc00; }
+.couleur-active { width: 56px; height: 56px; border-radius: 50%; background: #fff; display: flex; align-items: center; justify-content: center; font-size: 2rem; }
+.couleur-coeur, .couleur-carreau { color: #c8302b; }
+.couleur-pique, .couleur-trefle { color: #1a1a1a; }
+button.couleur-coeur, button.couleur-carreau, button.couleur-pique, button.couleur-trefle { font-size: 1.6rem; background: #fff; }
+
+.reversi-grille { width: min(480px, 94vw); gap: 2px; background: #1f6b3f; padding: 4px; border-radius: 10px; }
+.rev-case { background: #2e8b57; border: none; border-radius: 4px; padding: 0; }
+.rev-case.dernier { outline: 2px solid #ffcc00; }
+.pion { width: 78%; height: 78%; border-radius: 50%; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); }
+.pion.p1 { background: #111; }
+.pion.p2 { background: #f5f5f5; }
+.point { width: 22%; height: 22%; border-radius: 50%; background: rgba(255, 255, 255, 0.55); display: inline-block; }
+
+.dames-grille { width: min(520px, 94vw); gap: 0; border: 4px solid #5a3e24; }
+.dame-case { aspect-ratio: 1; border: none; padding: 0; background: #f0d9b5; display: flex; align-items: center; justify-content: center; cursor: default; }
+.dame-case.sombre { background: #b58863; }
+.dame-case.choisie { background: #d4b24c; }
+.dame-case.cible { background: #8fb96a; cursor: pointer; }
+.dame-case.dernier { box-shadow: inset 0 0 0 3px #ffcc00; }
+.dpion { width: 78%; height: 78%; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.6rem; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); }
+.dpion.clair { background: #f4ecd8; color: #8a6d1d; border: 3px solid #d8c9a0; }
+.dpion.fonce { background: #3b2a22; color: #e0b84a; border: 3px solid #1d130f; }
+.dpion.jouable { outline: 3px solid #ffcc00; cursor: pointer; }
