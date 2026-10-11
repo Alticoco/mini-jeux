@@ -1,0 +1,33 @@
+# Mots courants pour le Pendu (un mot par ligne ou séparés par des espaces). Lignes commençant par # ignorées.
+maison jardin fenêtre cuisine chambre escalier voiture bateau avion train vélo camion route chemin pont rivière
+montagne forêt océan plage désert île volcan nuage orage soleil lune étoile planète ciel vent pluie neige glace
+printemps été automne hiver matin soir minuit midi semaine mois année horloge montre calendrier
+chat chien cheval vache mouton cochon poule canard lapin souris renard loup ours lion tigre éléphant girafe singe
+zèbre dauphin baleine requin poisson tortue grenouille serpent lézard crocodile escargot papillon abeille fourmi
+araignée mouche moustique oiseau hirondelle moineau corbeau aigle hibou perroquet pingouin
+pomme poire banane orange citron fraise cerise raisin pêche abricot prune ananas melon pastèque framboise
+carotte tomate salade poireau oignon ail pomme patate courgette aubergine radis chou haricot petit champignon
+pain fromage beurre lait yaourt gâteau chocolat bonbon biscuit confiture miel sucre sel poivre farine oeuf
+soupe viande jambon saucisse poulet poisson riz pâtes frites crêpe tarte glace café thé jus eau vin bière
+table chaise fauteuil canapé armoire tiroir lit oreiller couverture tapis rideau miroir lampe bougie
+assiette fourchette couteau cuillère verre bouteille casserole poêle four frigo évier
+livre cahier crayon stylo gomme règle ciseaux cartable tableau classe école maître élève leçon dictée
+musique guitare piano violon tambour trompette flûte chanson orchestre concert danse théâtre cinéma film
+football tennis basket rugby natation course cyclisme judo escrime boxe randonnée escalade plongée patinage
+ordinateur clavier souris écran téléphone télévision radio caméra photo imprimante internet robot machine
+médecin infirmier dentiste boulanger boucher pompier policier facteur agriculteur ingénieur professeur
+cuisinier plombier électricien menuisier maçon peintre coiffeur avocat pilote marin artiste écrivain
+famille père mère frère soeur grand-père grand-mère oncle tante cousin cousine voisin ami copain enfant bébé
+joie tristesse colère peur surprise amour amitié courage patience bonheur liberté vérité mensonge silence
+rouge bleu vert jaune orange violet rose blanc noir marron gris argent doré
+chapeau manteau veste pantalon chemise robe jupe chaussette chaussure botte écharpe gant lunettes ceinture
+hôpital pharmacie boulangerie bibliothèque musée château cathédrale église marché magasin supermarché
+restaurant hôtel gare aéroport stade piscine cinéma théâtre mairie banque parc square fontaine
+chocolatier parapluie bicyclette aventure mystère trésor pirate chevalier princesse dragon fantôme sorcière
+magicien licorne sirène géant nain fée château labyrinthe énigme secret voyage vacances valise passeport
+dictionnaire alphabet grammaire orthographe vocabulaire problème solution question réponse exercice
+diamant émeraude rubis saphir perle cristal métal fer cuivre bronze or argent plomb
+fromage camembert baguette croissant éclair macaron tartine raclette fondue cassoulet ratatouille
+papillon coccinelle libellule sauterelle grillon cigale scarabée chenille
+tempête brouillard tonnerre éclair arc-en-ciel verglas canicule sécheresse inondation
+bibliothèque télescope microscope laboratoire expérience électricité magnétisme gravité énergie
