@@ -36,8 +36,12 @@ import { jeuSpider } from './spider/jeu';
 import { jeuPyramide } from './pyramide/jeu';
 import { jeuMahjong } from './mahjong/jeu';
 
+import { jeuTetris } from './tetris/jeu';
+import { jeuCasseBriques } from './cassebriques/jeu';
+import { jeuPong } from './pong/jeu';
+
 /** Ordre d'affichage dans le menu (par famille). */
 [
-  jeuKlondike, jeuFreeCell, jeuSpider, jeuPyramide, jeuBataille, jeuHuitAmericain, jeuMenteur, jeuMistigri, jeuPouilleux, jeuDames, jeuReversi, jeuSudoku, jeuDemineur, jeu2048, jeuTaquin, jeuPendu, morpion, jeuP4, jeuSnake,
+  jeuKlondike, jeuFreeCell, jeuSpider, jeuPyramide, jeuBataille, jeuHuitAmericain, jeuMenteur, jeuMistigri, jeuPouilleux, jeuDames, jeuReversi, jeuSudoku, jeuDemineur, jeu2048, jeuTaquin, jeuPendu, morpion, jeuP4, jeuSnake, jeuTetris, jeuCasseBriques, jeuPong,
   jeuMahjong, jeuHanoi, jeuLightsOut, jeuBinairo, jeuPicross, jeuSokoban, jeuMotsMeles, jeuMotus, jeuFloodIt, jeuPFC, jeuPileFace, jeuMemory, jeuSimon, jeuYams, jeuFarkle,
 ].forEach(enregistrerJeu);

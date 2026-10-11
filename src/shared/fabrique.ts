@@ -15,7 +15,7 @@ export interface Hote<E> {
   intervalle(fn: () => void, ms: number): number;
   stop(id: number): void;
   delai(fn: () => void, ms: number): number;
-  clavier(fn: (e: KeyboardEvent) => void): void;
+  clavier(fn: (e: KeyboardEvent) => void, type?: 'keydown' | 'keyup'): void;
   /** Boucle d'animation ; renvoie une fonction d'arrêt. dt en millisecondes. */
   boucle(fn: (dt: number) => void): () => void;
   /** Nouvelle partie (avec un état particulier si fourni). */
@@ -49,13 +49,13 @@ export function fabrique<E>(def: Def<E>): Jeu {
   let hote: Hote<E> | null = null;
   let intervalles: number[] = [];
   let delais: number[] = [];
-  let touches: Array<(e: KeyboardEvent) => void> = [];
+  let touches: Array<[string, (e: KeyboardEvent) => void]> = [];
   let arretsBoucle: Array<() => void> = [];
 
   const nettoyer = () => {
     intervalles.forEach((i) => window.clearInterval(i));
     delais.forEach((d) => window.clearTimeout(d));
-    touches.forEach((f) => document.removeEventListener('keydown', f));
+    touches.forEach(([t, f]) => document.removeEventListener(t, f as EventListener));
     arretsBoucle.forEach((f) => f());
     intervalles = [];
     delais = [];
@@ -91,9 +91,9 @@ export function fabrique<E>(def: Def<E>): Jeu {
         delais.push(id);
         return id;
       },
-      clavier(fn) {
-        touches.push(fn);
-        document.addEventListener('keydown', fn);
+      clavier(fn, type = 'keydown') {
+        touches.push([type, fn]);
+        document.addEventListener(type, fn);
       },
       boucle(fn) {
         let actif = true;
