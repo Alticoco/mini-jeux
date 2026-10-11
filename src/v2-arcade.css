@@ -1,0 +1,9 @@
+/* V2 : arcade */
+.tetris-zone { display: flex; gap: 20px; align-items: flex-start; flex-wrap: wrap; justify-content: center; }
+.tetris-canvas, .cb-canvas, .pong-canvas { border: 2px solid var(--bord); border-radius: 10px; max-width: 100%; height: auto; background: var(--surface2); touch-action: none; }
+.tetris-cote { display: flex; flex-direction: column; gap: 10px; min-width: 120px; }
+.tetris-cote h2 { font-size: 1rem; color: var(--muet); }
+.tetris-suivante { background: var(--surface2); border-radius: 8px; }
+.tetris-infos { display: flex; flex-direction: column; gap: 6px; }
+.tetris-infos b { color: var(--accent); }
+.cb-canvas { max-height: 62vh; width: auto; }

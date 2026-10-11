@@ -14,8 +14,12 @@ Tauri v2 + Vite + TypeScript (sans framework). Tests : Vitest. Stockage : `local
 ## Structure
 - `src/core/` : menu, registre, stockage, stats, options, sons, écran de jeu (`app.ts`).
 - `src/games/<id>/` : `logique.ts` + `jeu.ts`. Modèle de référence : `src/games/morpion`.
-- `src/shared/` : `dom.ts` (helper `el`), `alea.ts`, `cartes.ts`.
+- `src/shared/` : `dom.ts` (helper `el`), `alea.ts`, `cartes.ts`, `tableau.ts` (colonnes de cartes), `fabrique.ts`.
 - `tests/` : tests unitaires de la logique.
+
+## Fabrique (jeux V2)
+La plupart des jeux V2 utilisent `fabrique<Etat>({...})` de `src/shared/fabrique.ts` : on fournit `neuf`, `valide`, `vue(h)` (reconstruit l'interface), `demarre`/`arrete`/`annuler` optionnels. L'objet `h` offre `render, sauver, fin, son, intervalle, delai, clavier, boucle (requestAnimationFrame), recommencer` ; minuteurs et écouteurs sont nettoyés automatiquement. Les jeux d'arcade construisent leur DOM une seule fois dans `vue` et dessinent dans `h.boucle`.
+Les CSS de la V2 sont dans `src/v2-*.css`.
 
 ## Ajouter un jeu
 1. Créer `src/games/<id>/logique.ts` (pur) et `jeu.ts` qui exporte un objet `Jeu` (voir `src/core/types.ts`) :

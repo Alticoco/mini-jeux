@@ -27,6 +27,8 @@ export interface ContexteJeu {
   /** À appeler après chaque coup : écrit jeu.sauvegarder() sur disque. */
   sauvegardeAuto(): void;
   jouerSon(nom: NomSon): void;
+  /** Note isolée (Simon, etc.) ; fréquence en Hz, durée en secondes. */
+  jouerNote(frequence: number, duree?: number): void;
 }
 
 export type NomSon = 'clic' | 'pose' | 'gagne' | 'perdu' | 'erreur';

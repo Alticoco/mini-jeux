@@ -1,0 +1,23 @@
+/* V2 : solitaires et Mahjong */
+.fc-tableau, .sp-tableau { grid-template-columns: repeat(8, calc(78px * var(--zoom-cartes))); }
+.sp-tableau { grid-template-columns: repeat(10, calc(66px * var(--zoom-cartes))); gap: 6px; min-width: calc(10 * 66px * var(--zoom-cartes) + 9 * 6px); }
+.sp-tableau .carte { --w: calc(66px * var(--zoom-cartes)); }
+.sp-tableau .emplacement { width: calc(66px * var(--zoom-cartes)); height: calc(66px * 1.4 * var(--zoom-cartes)); }
+.fc-cellules { display: flex; gap: 12px; }
+.fc-cellule { cursor: pointer; }
+
+.pyr { display: flex; flex-direction: column; align-items: center; }
+.pyr-ligne { display: flex; gap: 8px; margin-top: calc(-34px * var(--zoom-cartes)); }
+.pyr-ligne:first-child { margin-top: 0; }
+.pyr .carte.bloquee { filter: brightness(0.7); cursor: default; }
+.carte-vide { width: calc(78px * var(--zoom-cartes)); height: calc(78px * 1.4 * var(--zoom-cartes)); pointer-events: none; }
+
+.mj-plateau { position: relative; margin: 0 auto; background: #1d5a3a; border-radius: 16px; }
+.mj-tuile { position: absolute; width: 46px; height: 60px; padding: 0; border: 1px solid #8a7a5a; border-radius: 6px; background: linear-gradient(160deg, #fffdf3, #e9dfc0); box-shadow: 3px 3px 0 #b5a67a, 4px 4px 6px rgba(0, 0, 0, 0.4); font-size: 40px; line-height: 1; cursor: pointer; display: flex; align-items: center; justify-content: center; font-family: 'Segoe UI Symbol', 'Noto Sans Symbols 2', serif; }
+.mj-tuile.bloquee { filter: brightness(0.72); cursor: default; }
+.mj-tuile.choisie { outline: 3px solid #ffcc00; filter: none; }
+.mj-tuile.indice { outline: 3px solid #35c6ff; }
+.mj-tuile.car { color: #c0392b; } .mj-tuile.bam { color: #1e8449; } .mj-tuile.cer { color: #1f5fbf; }
+.mj-tuile.vent { color: #222; } .mj-tuile.dragon { color: #8e44ad; }
+.mj-tuile.fleur { color: #d6409f; } .mj-tuile.saison { color: #d9822b; }
+.defile-x { overflow-y: hidden; }

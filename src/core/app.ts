@@ -2,7 +2,7 @@ import { el, vider } from '../shared/dom';
 import { jeux, jeuParId, familles } from './registre';
 import { donnees, enregistrer, exporterTexte, importerTexte, reinitialiserStats, optionsParDefaut } from './storage';
 import { enregistrerResultat, statsDe, tauxVictoire } from './stats';
-import { jouerSon } from './son';
+import { jouerNote, jouerSon } from './son';
 import type { ContexteJeu, Jeu } from './types';
 
 const racine = (): HTMLElement => document.getElementById('app')!;
@@ -225,6 +225,7 @@ export function ouvrirJeu(id: string, nouvelle = false): void {
       enregistrer();
     },
     jouerSon: (n) => jouerSon(n, d.options.son),
+    jouerNote: (f, duree = 0.25) => jouerNote(f, duree, d.options.son),
   };
 
   const boutons: Array<HTMLElement> = [
