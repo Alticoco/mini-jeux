@@ -1,0 +1,34 @@
+/* V2 : puzzles et mots */
+.binairo-grille { gap: 4px; width: min(420px, 94vw); }
+.bin-case { font-size: clamp(1.2rem, 5vw, 2rem); }
+.bin-case.donnee { background: var(--surface2); }
+.bin-case.conflit { background: color-mix(in srgb, var(--mal) 25%, var(--surface)); border-color: var(--mal); }
+.picross { display: grid; gap: 0; align-items: stretch; }
+.pic-clue { display: flex; gap: 4px; font-weight: 700; font-size: 0.85rem; color: var(--texte); padding: 2px 4px; }
+.pic-clue.col { flex-direction: column; justify-content: flex-end; align-items: center; }
+.pic-clue.lig { justify-content: flex-end; align-items: center; padding-right: 8px; }
+.pic-clue.ok { color: var(--muet); opacity: 0.55; }
+.pic-case { width: clamp(20px, 5.5vw, 32px); aspect-ratio: 1; border: 1px solid var(--bord); background: var(--surface); cursor: pointer; padding: 0; font-size: 0.9rem; color: var(--muet); }
+.pic-case.pleine { background: var(--texte); }
+.pic-case.sep-d { border-right: 2px solid var(--texte); }
+.pic-case.sep-b { border-bottom: 2px solid var(--texte); }
+.sokoban-grille { gap: 0; }
+.sok-case { aspect-ratio: 1; display: flex; align-items: center; justify-content: center; font-size: 1.6rem; background: var(--surface2); user-select: none; }
+.sok-case.mur { background: #6b5b4b; border: 1px solid #4d4033; }
+.sok-case.caisse { background: #d9a85c33; }
+.sok-case.caisse-ok { background: color-mix(in srgb, var(--ok) 35%, var(--surface2)); }
+.mm-zone { display: flex; gap: 18px; flex-wrap: wrap; justify-content: center; align-items: flex-start; }
+.mm-grille { gap: 2px; }
+.mm-case { font-size: 1rem; padding: 0; border-radius: 6px; }
+.mm-case.trouvee { background: color-mix(in srgb, var(--ok) 35%, var(--surface)); }
+.mm-case.debut { background: var(--accent); color: var(--accent-texte); }
+.mm-liste { list-style: none; margin: 0; padding: 0; columns: 2; column-gap: 20px; font-weight: 600; letter-spacing: 0.05em; }
+.mm-liste li.barre { text-decoration: line-through; color: var(--muet); }
+.motus-grille { display: flex; flex-direction: column; gap: 6px; }
+.motus-ligne { display: grid; gap: 6px; }
+.motus-case { width: clamp(40px, 11vw, 54px); aspect-ratio: 1; display: flex; align-items: center; justify-content: center; font-size: 1.6rem; font-weight: 800; border: 2px solid var(--bord); border-radius: 8px; background: var(--surface); }
+.motus-case.bien, .touche.bien { background: var(--ok); color: #fff; border-color: var(--ok); }
+.motus-case.mal, .touche.mal { background: #d6a010; color: #fff; border-color: #d6a010; }
+.motus-case.absent, .touche.absent { background: var(--muet); color: #fff; opacity: 0.8; }
+.motus-clavier { display: flex; flex-direction: column; gap: 6px; }
+.motus-clavier .btn { padding: 8px 10px; min-width: 34px; font-weight: 700; }

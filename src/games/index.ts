@@ -19,8 +19,14 @@ import { jeuSimon } from './simon/jeu';
 import { jeuYams } from './yams/jeu';
 import { jeuFarkle } from './farkle/jeu';
 
+import { jeuBinairo } from './binairo/jeu';
+import { jeuPicross } from './picross/jeu';
+import { jeuSokoban } from './sokoban/jeu';
+import { jeuMotsMeles } from './motsmeles/jeu';
+import { jeuMotus } from './motus/jeu';
+
 /** Ordre d'affichage dans le menu (par famille). */
 [
   jeuKlondike, jeuBataille, jeuSudoku, jeuDemineur, jeu2048, jeuTaquin, jeuPendu, morpion, jeuP4, jeuSnake,
-  jeuHanoi, jeuLightsOut, jeuFloodIt, jeuPFC, jeuPileFace, jeuMemory, jeuSimon, jeuYams, jeuFarkle,
+  jeuHanoi, jeuLightsOut, jeuBinairo, jeuPicross, jeuSokoban, jeuMotsMeles, jeuMotus, jeuFloodIt, jeuPFC, jeuPileFace, jeuMemory, jeuSimon, jeuYams, jeuFarkle,
 ].forEach(enregistrerJeu);
