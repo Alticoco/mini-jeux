@@ -9,6 +9,18 @@ import { jeuPendu } from './pendu/jeu';
 import { morpion } from './morpion/jeu';
 import { jeuP4 } from './puissance4/jeu';
 import { jeuSnake } from './snake/jeu';
+import { jeuHanoi } from './hanoi/jeu';
+import { jeuLightsOut } from './lightsout/jeu';
+import { jeuFloodIt } from './floodit/jeu';
+import { jeuPFC } from './pfc/jeu';
+import { jeuPileFace } from './pileface/jeu';
+import { jeuMemory } from './memory/jeu';
+import { jeuSimon } from './simon/jeu';
+import { jeuYams } from './yams/jeu';
+import { jeuFarkle } from './farkle/jeu';
 
 /** Ordre d'affichage dans le menu (par famille). */
-[jeuKlondike, jeuBataille, jeuSudoku, jeuDemineur, jeu2048, jeuTaquin, jeuPendu, morpion, jeuP4, jeuSnake].forEach(enregistrerJeu);
+[
+  jeuKlondike, jeuBataille, jeuSudoku, jeuDemineur, jeu2048, jeuTaquin, jeuPendu, morpion, jeuP4, jeuSnake,
+  jeuHanoi, jeuLightsOut, jeuFloodIt, jeuPFC, jeuPileFace, jeuMemory, jeuSimon, jeuYams, jeuFarkle,
+].forEach(enregistrerJeu);

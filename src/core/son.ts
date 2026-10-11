@@ -32,3 +32,22 @@ export function jouerSon(nom: NomSon, actif: boolean): void {
     /* pas d'audio disponible */
   }
 }
+
+export function jouerNote(freq: number, duree: number, actif: boolean): void {
+  if (!actif) return;
+  try {
+    audio ??= new AudioContext();
+    const t = audio.currentTime;
+    const osc = audio.createOscillator();
+    const gain = audio.createGain();
+    osc.type = 'sine';
+    osc.frequency.value = freq;
+    gain.gain.setValueAtTime(0.08, t);
+    gain.gain.exponentialRampToValueAtTime(0.0001, t + duree);
+    osc.connect(gain).connect(audio.destination);
+    osc.start(t);
+    osc.stop(t + duree);
+  } catch {
+    /* pas d'audio disponible */
+  }
+}

@@ -187,3 +187,39 @@ table.stats th, table.stats td { text-align: left; padding: 6px 8px; border-bott
 .k-tableau { display: grid; grid-template-columns: repeat(7, calc(78px * var(--zoom-cartes))); gap: 12px; justify-content: space-between; min-width: calc(7 * 78px * var(--zoom-cartes) + 6 * 12px); align-items: start; }
 .k-colonne { position: relative; min-height: calc(78px * 1.4 * var(--zoom-cartes)); }
 .k-colonne .emplacement { position: absolute; inset: 0 auto auto 0; }
+
+/* V2 : petits jeux */
+.hanoi-tours { display: flex; gap: 14px; width: min(660px, 96vw); }
+.hanoi-tour { position: relative; flex: 1; height: 240px; background: var(--surface); border: 2px solid var(--bord); border-radius: 12px; cursor: pointer; padding: 0; }
+.hanoi-tour.choisie { border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent); }
+.hanoi-axe { position: absolute; left: 50%; bottom: 0; width: 8px; height: 90%; margin-left: -4px; background: var(--bord); border-radius: 4px; }
+.hanoi-disque { position: absolute; left: 50%; height: 20px; transform: translateX(-50%); border-radius: 10px; border: 1px solid rgba(0, 0, 0, 0.25); }
+.lo-grille { width: min(360px, 90vw); gap: 6px; }
+.lo-case { background: var(--surface2); border-radius: 10px; }
+.lo-case.allume { background: #ffd23f; border-color: #e0a800; box-shadow: 0 0 14px #ffd23f; }
+.flood-grille { gap: 1px; width: min(420px, 92vw); }
+.flood-case { aspect-ratio: 1; }
+.flood-bouton { width: 52px; height: 52px; border-radius: 50%; border: 3px solid var(--surface); cursor: pointer; box-shadow: var(--ombre); }
+.flood-bouton:disabled { opacity: 0.3; cursor: default; }
+.pfc-duel { display: flex; align-items: center; gap: 20px; font-size: 1.1rem; }
+.pfc-main { font-size: 5rem; background: var(--surface); border-radius: 20px; padding: 10px 24px; box-shadow: var(--ombre); }
+.pfc-choix { font-size: 1.2rem; padding: 10px 18px; }
+.piece { width: 150px; height: 150px; border-radius: 50%; border: 6px solid #b8860b; background: radial-gradient(circle at 35% 30%, #ffe27a, #d4a017); font-size: 4rem; cursor: pointer; color: #6b4d00; box-shadow: var(--ombre); }
+.memory-grille { gap: 8px; width: min(460px, 94vw); }
+.memory-carte { font-size: clamp(1.4rem, 6vw, 2.4rem); background: repeating-linear-gradient(45deg, #5b46d6 0 6px, #7a68ea 6px 12px); border-color: #fff; }
+.memory-carte.ouverte { background: var(--surface); }
+.memory-carte.trouvee { background: color-mix(in srgb, var(--ok) 30%, var(--surface)); }
+.simon-pave { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; width: min(320px, 90vw); }
+.simon-touche { aspect-ratio: 1; border-radius: 24px; border: none; cursor: pointer; opacity: 0.55; }
+.simon-touche.allumee { opacity: 1; filter: brightness(1.3); box-shadow: 0 0 24px currentColor; }
+.simon-touche:disabled { cursor: default; }
+.s0 { background: #2fa84f; color: #2fa84f; } .s1 { background: #d6453d; color: #d6453d; }
+.s2 { background: #f2c230; color: #f2c230; } .s3 { background: #3b82e0; color: #3b82e0; }
+.des { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; min-height: 80px; }
+.de { font-size: 3.4rem; line-height: 1; width: 76px; height: 76px; background: var(--surface); border: 2px solid var(--bord); border-radius: 14px; cursor: pointer; padding: 0; color: var(--texte); }
+.de.garde { border-color: var(--accent); background: color-mix(in srgb, var(--accent) 25%, var(--surface)); }
+.de:disabled { cursor: default; }
+.yams-table { max-width: 360px; }
+.yams-table tr { cursor: pointer; }
+.yams-table tr.possible:hover { background: var(--surface2); }
+.yams-table td.pris { font-weight: 700; } .yams-table td.prev { color: var(--accent); }
