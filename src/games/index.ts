@@ -31,8 +31,13 @@ import { jeuHuitAmericain } from './huitamericain/jeu';
 import { jeuMenteur } from './menteur/jeu';
 import { jeuMistigri, jeuPouilleux } from './paires/jeu';
 
+import { jeuFreeCell } from './freecell/jeu';
+import { jeuSpider } from './spider/jeu';
+import { jeuPyramide } from './pyramide/jeu';
+import { jeuMahjong } from './mahjong/jeu';
+
 /** Ordre d'affichage dans le menu (par famille). */
 [
-  jeuKlondike, jeuBataille, jeuHuitAmericain, jeuMenteur, jeuMistigri, jeuPouilleux, jeuDames, jeuReversi, jeuSudoku, jeuDemineur, jeu2048, jeuTaquin, jeuPendu, morpion, jeuP4, jeuSnake,
-  jeuHanoi, jeuLightsOut, jeuBinairo, jeuPicross, jeuSokoban, jeuMotsMeles, jeuMotus, jeuFloodIt, jeuPFC, jeuPileFace, jeuMemory, jeuSimon, jeuYams, jeuFarkle,
+  jeuKlondike, jeuFreeCell, jeuSpider, jeuPyramide, jeuBataille, jeuHuitAmericain, jeuMenteur, jeuMistigri, jeuPouilleux, jeuDames, jeuReversi, jeuSudoku, jeuDemineur, jeu2048, jeuTaquin, jeuPendu, morpion, jeuP4, jeuSnake,
+  jeuMahjong, jeuHanoi, jeuLightsOut, jeuBinairo, jeuPicross, jeuSokoban, jeuMotsMeles, jeuMotus, jeuFloodIt, jeuPFC, jeuPileFace, jeuMemory, jeuSimon, jeuYams, jeuFarkle,
 ].forEach(enregistrerJeu);
