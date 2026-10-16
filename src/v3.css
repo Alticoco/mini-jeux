@@ -106,3 +106,7 @@
 .ec-piece { font-size: clamp(1.8rem, 8vw, 3.2rem); line-height: 1; }
 .ec-piece.blanche { color: #fff; text-shadow: 0 0 2px #000, 0 0 2px #000, 0 0 3px #000; }
 .ec-piece.noire { color: #1a1a1a; text-shadow: 0 0 1px #fff; }
+
+/* Arcade V3 */
+.pac-canvas, .inv-canvas, .flappy-canvas { border: 2px solid var(--bord); border-radius: 10px; max-width: 100%; height: auto; max-height: 68vh; width: auto; touch-action: none; background: #0b0c1c; }
+.flappy-canvas { cursor: pointer; }

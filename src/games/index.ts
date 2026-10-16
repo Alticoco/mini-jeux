@@ -60,8 +60,12 @@ import { jeuBatailleNavale } from './bataillenavale/jeu';
 import { jeuBackgammon } from './backgammon/jeu';
 import { jeuEchecs } from './echecs/jeu';
 
+import { jeuInvaders } from './invaders/jeu';
+import { jeuPacman } from './pacman/jeu';
+import { jeuFlappy } from './flappy/jeu';
+
 /** Ordre d'affichage dans le menu (par famille). */
 [
-  jeuKlondike, jeuFreeCell, jeuSpider, jeuPyramide, jeuGolf, jeuTriPeaks, jeuScorpion, jeuYukon, jeuBataille, jeuHuitAmericain, jeuMenteur, jeuMistigri, jeuPouilleux, jeuDames, jeuReversi, jeuSudoku, jeuDemineur, jeu2048, jeuTaquin, jeuPendu, jeuMotsCroises, jeuAnagrammes, jeuBoggle, jeuMotLong, morpion, jeuP4, jeuEchecs, jeuBackgammon, jeuBatailleNavale, jeuMastermind, jeuSnake, jeuTetris, jeuCasseBriques, jeuPong,
+  jeuKlondike, jeuFreeCell, jeuSpider, jeuPyramide, jeuGolf, jeuTriPeaks, jeuScorpion, jeuYukon, jeuBataille, jeuHuitAmericain, jeuMenteur, jeuMistigri, jeuPouilleux, jeuDames, jeuReversi, jeuSudoku, jeuDemineur, jeu2048, jeuTaquin, jeuPendu, jeuMotsCroises, jeuAnagrammes, jeuBoggle, jeuMotLong, morpion, jeuP4, jeuEchecs, jeuBackgammon, jeuBatailleNavale, jeuMastermind, jeuSnake, jeuTetris, jeuCasseBriques, jeuPong, jeuInvaders, jeuPacman, jeuFlappy,
   jeuMahjong, jeuHanoi, jeuLightsOut, jeuBinairo, jeuKakuro, jeuFutoshiki, jeuHitori, jeuNurikabe, jeuPicross, jeuSokoban, jeuMotsMeles, jeuMotus, jeuFloodIt, jeuPFC, jeuPileFace, jeuMemory, jeuSimon, jeuYams, jeuFarkle,
 ].forEach(enregistrerJeu);
