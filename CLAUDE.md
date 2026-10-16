@@ -19,7 +19,7 @@ Tauri v2 + Vite + TypeScript (sans framework). Tests : Vitest. Stockage : `local
 
 ## Fabrique (jeux V2)
 La plupart des jeux V2 utilisent `fabrique<Etat>({...})` de `src/shared/fabrique.ts` : on fournit `neuf`, `valide`, `vue(h)` (reconstruit l'interface), `demarre`/`arrete`/`annuler` optionnels. L'objet `h` offre `render, sauver, fin, son, intervalle, delai, clavier, boucle (requestAnimationFrame), recommencer` ; minuteurs et écouteurs sont nettoyés automatiquement. Les jeux d'arcade construisent leur DOM une seule fois dans `vue` et dessinent dans `h.boucle`.
-Les CSS de la V2 sont dans `src/v2-*.css`.
+Les CSS sont dans `src/style.css` (cadre) et `src/v2-*.css`, `src/v3*.css` (jeux). `src/shared/dictionnaire.ts` expose le dictionnaire de validation (`assets/mots-fr.json`).
 
 ## Ajouter un jeu
 1. Créer `src/games/<id>/logique.ts` (pur) et `jeu.ts` qui exporte un objet `Jeu` (voir `src/core/types.ts`) :
@@ -36,4 +36,4 @@ Les CSS de la V2 sont dans `src/v2-*.css`.
 - Windows : ajouter `%USERPROFILE%\.cargo\bin` au PATH si `cargo` est introuvable.
 
 ## Décisions (phase 0)
-Windows uniquement · interface 100 % française · style simple et propre (thème clair/sombre) · adversaires IA simples en V1 (Morpion, Puissance 4, Bataille) · effets sonores seulement, désactivables · souris + clavier · nom : **Mini-Jeux** · mots croisés hors V1.
+Windows uniquement · interface 100 % française · style simple et propre (thème clair/sombre) · adversaires IA simples en V1 (Morpion, Puissance 4, Bataille) · effets sonores seulement, désactivables · souris + clavier · nom : **Mini-Jeux** · mots croisés : grilles à numéros (pas de mots fléchés) générées par script.
