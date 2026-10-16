@@ -1,0 +1,18 @@
+/* Rami */
+.rami-main .carte { margin-left: calc(-26px * var(--zoom-cartes)); }
+.rami-main .carte:first-child { margin-left: 0; }
+.carte.joker { background: linear-gradient(160deg, #f3e0ff, #cfa8ff); align-items: center; justify-content: center; font-size: calc(var(--w) * 0.2); }
+.carte.joker .centre { font-size: calc(var(--w) * 0.55); }
+.rami-poses { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; min-height: 40px; }
+.rami-pose { display: flex; background: rgba(255, 255, 255, 0.92); border: 2px solid transparent; border-radius: 8px; padding: 4px 6px; gap: 2px; cursor: default; }
+.rami-pose.cible { border-color: #ffcc00; cursor: pointer; box-shadow: 0 0 8px #ffcc00; }
+.mini { background: #fff; color: #222; border: 1px solid #aaa; border-radius: 4px; padding: 2px 5px; font-weight: 700; font-size: 0.9rem; }
+.mini.rouge { color: #c8302b; }
+.mini.joker { background: #e5c8ff; }
+
+/* Crapette */
+.crap-table { display: flex; flex-direction: column; gap: 12px; align-items: center; overflow-x: auto; }
+.crap-cote { display: flex; gap: 14px; align-items: center; justify-content: center; }
+.crap-fond { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; }
+.crap-colonnes { display: grid; grid-template-columns: repeat(8, calc(78px * var(--zoom-cartes))); gap: 8px; align-items: start; min-width: calc(8 * 78px * var(--zoom-cartes) + 7 * 8px); }
+.crap-pile { position: relative; }

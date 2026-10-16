@@ -124,3 +124,13 @@
 .bel-siege.haut { grid-area: haut; } .bel-siege.gauche { grid-area: gauche; } .bel-siege.droite { grid-area: droite; }
 .bel-centre { grid-area: centre; display: grid; grid-template-columns: 1fr 1fr 1fr; grid-template-rows: auto auto auto; grid-template-areas: ". haut ." "gauche . droite" ". bas ."; gap: 4px; justify-items: center; align-items: center; min-height: calc(78px * 1.4 * var(--zoom-cartes) * 2.2); }
 .bel-pose.haut { grid-area: haut; } .bel-pose.gauche { grid-area: gauche; } .bel-pose.droite { grid-area: droite; } .bel-pose.bas { grid-area: bas; }
+
+/* Tarot */
+.carte.tarot { --w: calc(64px * var(--zoom-cartes)); }
+.carte.tarot.atout { background: linear-gradient(160deg, #fff8e1, #ffe9a8); color: #4a3200; }
+.carte.tarot.atout.bout { background: linear-gradient(160deg, #fff3b0, #ffd23f); box-shadow: 0 0 0 2px #c79100, var(--ombre); }
+.carte.tarot.excuse { background: linear-gradient(160deg, #e6f3ff, #b9dcff); align-items: center; justify-content: center; font-size: calc(var(--w) * 0.2); }
+.carte.tarot.dos { background: repeating-linear-gradient(45deg, #7a2f2f 0 6px, #a04545 6px 12px); }
+.tarot-main { max-width: 100%; }
+.tarot-main .carte { margin-left: calc(-30px * var(--zoom-cartes)); }
+.tarot-main .carte:first-child { margin-left: 0; }

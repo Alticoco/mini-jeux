@@ -53,7 +53,7 @@ function apres(h: Hote<Etat>, info: { scopa: boolean } | null, qui: string): voi
 const nomCourt = (c: Carte): string => `${c.rang === 1 ? 'l\'as' : c.rang === 11 ? 'le valet' : c.rang === 12 ? 'la dame' : c.rang === 13 ? 'le roi' : `le ${c.rang}`} de ${({ pique: 'pique', coeur: 'cœur', carreau: 'carreau', trefle: 'trèfle' })[c.couleur]}`;
 
 export const jeuScopa = fabrique<Etat>({
-  id: 'scopa', nom: 'Scopa', famille: 'Cartes contre l\'ordi', icone: '🇮🇹',
+  id: 'scopa', nom: 'Scopa', famille: 'Cartes contre l\'ordi', icone: '🪙',
   description: 'Le grand jeu de prises italien.',
   regles: `<p>Jeu de <b>40 cartes</b> (valeurs 1 à 7, valet = 8, dame = 9, roi = 10). Chacun reçoit 3 cartes, 4 sont posées sur la table.</p><ul><li>À votre tour, jouez une carte. Si elle a la <b>même valeur</b> qu'une carte de la table, vous la <b>prenez</b>. Sinon vous pouvez prendre un groupe de cartes dont la <b>somme</b> égale la valeur jouée. S'il y a une carte de même valeur, vous devez la prendre en priorité.</li><li>Sans prise possible, la carte reste sur la table.</li><li><b>Scopa</b> : vider la table d'un coup rapporte 1 point (sauf à la dernière carte).</li></ul><p>En fin de manche, 1 point pour : le plus de <b>cartes</b> ; le plus de <b>carreaux</b> ; le <b>7 de carreau</b> (« settebello ») ; la meilleure <b>primiera</b> (un meilleur 7 / 6 / as / 5 dans chaque couleur). Premier à ${OBJECTIF} points.</p>`,
   neuf: (o) => neufAvec(o.difficulte),
