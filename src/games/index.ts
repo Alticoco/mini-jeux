@@ -50,8 +50,13 @@ import { jeuHitori } from './hitori/jeu';
 import { jeuNurikabe } from './nurikabe/jeu';
 import { jeuKakuro } from './kakuro/jeu';
 
+import { jeuBoggle } from './boggle/jeu';
+import { jeuAnagrammes } from './anagrammes/jeu';
+import { jeuMotLong } from './motlong/jeu';
+import { jeuMotsCroises } from './motscroises/jeu';
+
 /** Ordre d'affichage dans le menu (par famille). */
 [
-  jeuKlondike, jeuFreeCell, jeuSpider, jeuPyramide, jeuGolf, jeuTriPeaks, jeuScorpion, jeuYukon, jeuBataille, jeuHuitAmericain, jeuMenteur, jeuMistigri, jeuPouilleux, jeuDames, jeuReversi, jeuSudoku, jeuDemineur, jeu2048, jeuTaquin, jeuPendu, morpion, jeuP4, jeuSnake, jeuTetris, jeuCasseBriques, jeuPong,
+  jeuKlondike, jeuFreeCell, jeuSpider, jeuPyramide, jeuGolf, jeuTriPeaks, jeuScorpion, jeuYukon, jeuBataille, jeuHuitAmericain, jeuMenteur, jeuMistigri, jeuPouilleux, jeuDames, jeuReversi, jeuSudoku, jeuDemineur, jeu2048, jeuTaquin, jeuPendu, jeuMotsCroises, jeuAnagrammes, jeuBoggle, jeuMotLong, morpion, jeuP4, jeuSnake, jeuTetris, jeuCasseBriques, jeuPong,
   jeuMahjong, jeuHanoi, jeuLightsOut, jeuBinairo, jeuKakuro, jeuFutoshiki, jeuHitori, jeuNurikabe, jeuPicross, jeuSokoban, jeuMotsMeles, jeuMotus, jeuFloodIt, jeuPFC, jeuPileFace, jeuMemory, jeuSimon, jeuYams, jeuFarkle,
 ].forEach(enregistrerJeu);
