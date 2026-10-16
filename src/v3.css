@@ -110,3 +110,17 @@
 /* Arcade V3 */
 .pac-canvas, .inv-canvas, .flappy-canvas { border: 2px solid var(--bord); border-radius: 10px; max-width: 100%; height: auto; max-height: 68vh; width: auto; touch-action: none; background: #0b0c1c; }
 .flappy-canvas { cursor: pointer; }
+
+/* Cartes contre l'ordi V3 */
+.scopa-table { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; min-height: calc(78px * 1.4 * var(--zoom-cartes)); align-items: center; }
+.bilan-pre { background: var(--surface2); padding: 10px 14px; border-radius: 10px; white-space: pre-wrap; text-align: left; max-width: 640px; font-family: inherit; }
+.main-cartes.petite .carte { --w: calc(34px * var(--zoom-cartes)); margin-left: calc(-18px * var(--zoom-cartes)); }
+.pres-sieges { display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; width: 100%; }
+.pres-siege { background: var(--surface); border: 2px solid var(--bord); border-radius: 12px; padding: 8px 14px; display: flex; flex-direction: column; align-items: center; gap: 4px; min-width: 180px; }
+.pres-siege.actif { border-color: var(--accent); box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 40%, transparent); }
+.bel-table { display: grid; grid-template-columns: 1fr minmax(240px, 2fr) 1fr; grid-template-rows: auto auto; grid-template-areas: ". haut ." "gauche centre droite"; gap: 10px; align-items: center; justify-items: center; }
+.bel-siege { display: flex; flex-direction: column; align-items: center; gap: 4px; color: #fff; padding: 6px 10px; border-radius: 10px; border: 2px solid transparent; }
+.bel-siege.actif { border-color: #ffcc00; }
+.bel-siege.haut { grid-area: haut; } .bel-siege.gauche { grid-area: gauche; } .bel-siege.droite { grid-area: droite; }
+.bel-centre { grid-area: centre; display: grid; grid-template-columns: 1fr 1fr 1fr; grid-template-rows: auto auto auto; grid-template-areas: ". haut ." "gauche . droite" ". bas ."; gap: 4px; justify-items: center; align-items: center; min-height: calc(78px * 1.4 * var(--zoom-cartes) * 2.2); }
+.bel-pose.haut { grid-area: haut; } .bel-pose.gauche { grid-area: gauche; } .bel-pose.droite { grid-area: droite; } .bel-pose.bas { grid-area: bas; }
