@@ -69,8 +69,14 @@ import { jeuPresident } from './president/jeu';
 
 import { jeuBelote } from './belote/jeu';
 
+import { jeuTarot } from './tarot/jeu';
+
+import { jeuRami } from './rami/jeu';
+
+import { jeuCrapette } from './crapette/jeu';
+
 /** Ordre d'affichage dans le menu (par famille). */
 [
-  jeuKlondike, jeuFreeCell, jeuSpider, jeuPyramide, jeuGolf, jeuTriPeaks, jeuScorpion, jeuYukon, jeuBataille, jeuScopa, jeuPresident, jeuBelote, jeuHuitAmericain, jeuMenteur, jeuMistigri, jeuPouilleux, jeuDames, jeuReversi, jeuSudoku, jeuDemineur, jeu2048, jeuTaquin, jeuPendu, jeuMotsCroises, jeuAnagrammes, jeuBoggle, jeuMotLong, morpion, jeuP4, jeuEchecs, jeuBackgammon, jeuBatailleNavale, jeuMastermind, jeuSnake, jeuTetris, jeuCasseBriques, jeuPong, jeuInvaders, jeuPacman, jeuFlappy,
+  jeuKlondike, jeuFreeCell, jeuSpider, jeuPyramide, jeuGolf, jeuTriPeaks, jeuScorpion, jeuYukon, jeuBataille, jeuScopa, jeuPresident, jeuBelote, jeuTarot, jeuRami, jeuCrapette, jeuHuitAmericain, jeuMenteur, jeuMistigri, jeuPouilleux, jeuDames, jeuReversi, jeuSudoku, jeuDemineur, jeu2048, jeuTaquin, jeuPendu, jeuMotsCroises, jeuAnagrammes, jeuBoggle, jeuMotLong, morpion, jeuP4, jeuEchecs, jeuBackgammon, jeuBatailleNavale, jeuMastermind, jeuSnake, jeuTetris, jeuCasseBriques, jeuPong, jeuInvaders, jeuPacman, jeuFlappy,
   jeuMahjong, jeuHanoi, jeuLightsOut, jeuBinairo, jeuKakuro, jeuFutoshiki, jeuHitori, jeuNurikabe, jeuPicross, jeuSokoban, jeuMotsMeles, jeuMotus, jeuFloodIt, jeuPFC, jeuPileFace, jeuMemory, jeuSimon, jeuYams, jeuFarkle,
 ].forEach(enregistrerJeu);
