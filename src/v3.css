@@ -1,0 +1,4 @@
+/* V3 */
+.tp-plateau { position: relative; margin: 0 auto; }
+.tp-plateau .carte.jouable { outline: 3px solid #ffcc00; outline-offset: -1px; }
+.golf-tableau { margin: 0 auto; }
