@@ -1,0 +1,352 @@
+# mot;définition  (un mot par ligne, sans accent ni trait d'union ; les définitions sont courtes et en français)
+maison;Elle abrite une famille
+jardin;On y cultive fleurs et légumes
+fenetre;Elle laisse entrer la lumière
+cuisine;Pièce où l'on prépare les repas
+chambre;Pièce où l'on dort
+escalier;Il relie deux étages
+voiture;Elle roule sur la route
+bateau;Il flotte sur l'eau
+avion;Il vole avec des ailes
+train;Il roule sur des rails
+velo;Il a deux roues et des pédales
+camion;Gros véhicule de transport
+route;Elle relie deux villes
+chemin;Petite voie de campagne
+pont;Il enjambe une rivière
+riviere;Elle coule vers le fleuve
+montagne;Grand relief aux sommets enneigés
+foret;Vaste étendue d'arbres
+ocean;Immense étendue d'eau salée
+plage;Bord de mer sablonneux
+desert;Lieu aride couvert de sable
+volcan;Montagne qui crache de la lave
+nuage;Il flotte dans le ciel
+orage;Tonnerre et éclairs
+soleil;Il brille le jour
+lune;Elle éclaire la nuit
+etoile;Point lumineux dans la nuit
+planete;La Terre en est une
+ciel;Il est bleu ou gris au-dessus de nous
+vent;Il fait bouger les feuilles
+pluie;Elle tombe des nuages
+neige;Flocons blancs de l'hiver
+glace;Eau gelée
+printemps;Saison des bourgeons
+ete;Saison des grandes vacances
+automne;Saison des feuilles mortes
+hiver;Saison la plus froide
+semaine;Sept jours
+annee;Douze mois
+horloge;Elle indique l'heure
+montre;Elle se porte au poignet
+calendrier;Il liste les jours de l'année
+chat;Il ronronne et miaule
+chien;Il aboie
+cheval;On peut le monter
+vache;Elle donne du lait
+mouton;Il donne sa laine
+cochon;Il aime la boue
+poule;Elle pond des oeufs
+canard;Il fait coin-coin
+lapin;Il aime les carottes
+souris;Elle craint le chat
+renard;Rusé, il vole les poules
+loup;Il hurle à la lune
+ours;Il hiberne
+lion;Roi des animaux
+tigre;Grand félin rayé
+elephant;Il a une trompe
+girafe;Elle a un très long cou
+singe;Il adore les bananes
+zebre;Cheval rayé d'Afrique
+dauphin;Mammifère marin joueur
+baleine;Plus grand animal marin
+requin;Poisson aux dents redoutables
+poisson;Il nage dans l'eau
+tortue;Elle porte sa maison sur le dos
+grenouille;Elle saute et coasse
+serpent;Il rampe
+crocodile;Reptile aux grandes mâchoires
+escargot;Il porte une coquille
+papillon;Insecte aux ailes colorées
+abeille;Elle fait du miel
+fourmi;Petit insecte très travailleur
+araignee;Elle tisse sa toile
+mouche;Petit insecte volant agaçant
+oiseau;Il a des plumes et chante
+aigle;Grand rapace
+hibou;Oiseau de nuit
+perroquet;Oiseau qui répète des mots
+pomme;Fruit de Blanche-Neige
+poire;Fruit juteux et allongé
+banane;Fruit jaune et courbe
+orange;Agrume rond
+citron;Fruit jaune très acide
+fraise;Petit fruit rouge du printemps
+cerise;Petit fruit rouge à noyau
+raisin;On en fait du vin
+peche;Fruit au duvet
+abricot;Fruit orangé à noyau
+ananas;Fruit tropical à écorce piquante
+melon;Fruit d'été à chair orangée
+carotte;Légume orange
+tomate;Fruit rouge utilisé en salade
+salade;Plat de feuilles vertes
+oignon;Il fait pleurer quand on l'épluche
+ail;Il parfume la cuisine
+poireau;Légume vert et blanc
+patate;Tubercule des frites
+courgette;Légume vert allongé
+radis;Petit légume rouge
+champignon;Il pousse dans les sous-bois
+pain;On le coupe à table
+fromage;Il peut être au lait de vache ou de chèvre
+beurre;Il se tartine
+lait;Boisson blanche
+yaourt;Dessert lacté
+gateau;Dessert d'anniversaire
+chocolat;Il fond sur la langue
+bonbon;Friandise sucrée
+biscuit;Petit gâteau sec
+confiture;Fruits cuits dans du sucre
+miel;Produit des abeilles
+sucre;Il adoucit le café
+sel;On en met dans la soupe
+poivre;Il fait éternuer
+farine;Elle sert à faire du pain
+oeuf;Il sort de la poule
+soupe;On la mange chaude à la cuillère
+viande;Elle vient des animaux
+jambon;Charcuterie rose
+poulet;Volaille rôtie
+riz;Céréale des paellas
+pates;Spaghettis ou macaronis
+crepe;Fine galette de la Chandeleur
+tarte;Pâtisserie ronde
+cafe;Boisson noire du matin
+the;Infusion de feuilles
+eau;On la boit pour se désaltérer
+vin;Boisson issue du raisin
+biere;Boisson à la mousse
+table;Meuble des repas
+chaise;On s'assoit dessus
+fauteuil;Siège confortable
+canape;Siège pour plusieurs personnes
+armoire;Meuble pour ranger les vêtements
+tiroir;Il coulisse dans un meuble
+lit;On y dort
+oreiller;Il soutient la tête
+couverture;Elle tient chaud au lit
+tapis;Il couvre le sol
+rideau;Il masque la fenêtre
+miroir;Il reflète l'image
+lampe;Elle éclaire une pièce
+bougie;Elle brûle en cire
+assiette;On y sert le repas
+fourchette;Elle pique les aliments
+couteau;Il coupe
+cuillere;Elle sert à manger la soupe
+verre;On y boit
+bouteille;Récipient à goulot
+casserole;Elle chauffe sur le feu
+poele;On y fait sauter les crêpes
+four;Il cuit le gâteau
+livre;On le lit
+cahier;L'élève y écrit
+crayon;Il écrit et s'efface
+stylo;Il écrit à l'encre
+gomme;Elle efface
+regle;Elle trace des droites
+ciseaux;Ils coupent le papier
+cartable;L'écolier le porte sur le dos
+tableau;On y écrit à la craie
+classe;Les élèves y étudient
+ecole;On y apprend à lire
+maitre;Il enseigne à l'école
+eleve;Il étudie
+lecon;Cours à apprendre
+musique;Art des sons
+guitare;Instrument à cordes
+piano;Instrument à touches noires et blanches
+violon;Instrument à archet
+tambour;On le frappe avec des baguettes
+trompette;Instrument à vent doré
+flute;Instrument à vent traversier
+chanson;Elle a un refrain
+concert;Spectacle musical
+danse;Elle suit le rythme
+theatre;Lieu des pièces jouées
+cinema;On y regarde des films
+film;Il passe sur grand écran
+football;Sport du ballon rond
+tennis;On y joue avec une raquette
+basket;Sport avec un panier
+rugby;Sport du ballon ovale
+natation;Sport aquatique
+cyclisme;Sport du Tour de France
+judo;Art martial japonais
+escalade;Sport de grimpe
+ordinateur;Machine à écran et clavier
+clavier;Il a des touches
+ecran;On y regarde les images
+telephone;Il sonne
+television;Elle diffuse des émissions
+radio;On l'écoute
+camera;Elle filme
+photo;Image prise par l'appareil
+internet;Réseau mondial
+robot;Machine automatique
+machine;Appareil qui travaille
+medecin;Il soigne les malades
+infirmier;Il aide le médecin
+dentiste;Il soigne les dents
+boulanger;Il fait le pain
+boucher;Il vend la viande
+pompier;Il éteint les incendies
+policier;Il fait respecter la loi
+facteur;Il distribue le courrier
+cuisinier;Il prépare les plats
+plombier;Il répare les tuyaux
+peintre;Il manie le pinceau
+coiffeur;Il coupe les cheveux
+avocat;Il défend devant le juge
+pilote;Il conduit l'avion
+marin;Il navigue
+artiste;Il crée des oeuvres
+ecrivain;Il écrit des livres
+famille;Parents et enfants
+pere;Papa
+mere;Maman
+frere;Fils des mêmes parents
+soeur;Fille des mêmes parents
+oncle;Frère de papa ou maman
+tante;Soeur de papa ou maman
+cousin;Fils de l'oncle ou de la tante
+voisin;Il habite à côté
+ami;On l'aime bien
+enfant;Petit d'homme
+bebe;Il pleure et boit du lait
+joie;Grand bonheur
+tristesse;Elle fait pleurer
+colere;On la pique
+peur;Elle fait trembler
+courage;Il aide à braver le danger
+amour;Sentiment profond
+amitie;Lien entre amis
+liberte;Absence de chaînes
+verite;Contraire du mensonge
+mensonge;Il n'est pas la vérité
+silence;Absence de bruit
+rouge;Couleur de la tomate
+bleu;Couleur du ciel
+vert;Couleur de l'herbe
+jaune;Couleur du citron
+violet;Couleur de l'aubergine
+rose;Fleur ou couleur
+blanc;Couleur de la neige
+noir;Couleur du charbon
+marron;Couleur de la châtaigne
+gris;Couleur des nuages d'orage
+chapeau;Il coiffe
+manteau;Il protège du froid
+veste;Vêtement à manches
+pantalon;Il couvre les jambes
+chemise;Elle a un col et des boutons
+robe;Vêtement féminin d'une pièce
+jupe;Elle s'arrête au genou
+chaussette;Elle couvre le pied
+chaussure;On la lace
+botte;Chaussure montante
+echarpe;Elle entoure le cou
+gant;Il couvre la main
+lunettes;Elles corrigent la vue
+ceinture;Elle tient le pantalon
+hopital;On y soigne les malades
+pharmacie;On y achète des médicaments
+bibliotheque;On y emprunte des livres
+musee;On y admire des oeuvres
+chateau;Demeure d'un seigneur
+cathedrale;Grande église
+eglise;Lieu de culte catholique
+marche;On y achète fruits et légumes
+magasin;On y fait ses achats
+restaurant;On y mange au dehors
+hotel;On y dort en voyage
+gare;Là où s'arrêtent les trains
+aeroport;Là où décollent les avions
+stade;On y joue au football
+piscine;On y nage
+mairie;Siège du maire
+banque;Elle garde l'argent
+parc;Grand jardin public
+fontaine;Elle jaillit sur la place
+aventure;Expérience pleine de risques
+mystere;Chose inexpliquée
+tresor;Coffre rempli d'or
+pirate;Forban des mers
+chevalier;Il porte une armure
+princesse;Fille du roi
+dragon;Monstre qui crache du feu
+fantome;Esprit qui hante
+sorciere;Elle prépare des potions
+magicien;Il fait des tours
+licorne;Cheval à une corne
+sirene;Mi-femme mi-poisson
+labyrinthe;On s'y perd facilement
+enigme;Elle demande de réfléchir
+secret;Il ne faut pas le dire
+voyage;Déplacement lointain
+vacances;Congés
+valise;On y range ses affaires
+passeport;Il permet de passer les frontières
+alphabet;Les lettres rangées
+grammaire;Règles de la langue
+orthographe;Façon d'écrire correctement
+vocabulaire;Ensemble de mots
+solution;Réponse à un problème
+question;On y répond
+reponse;On la donne à une question
+exercice;Il s'entraîne
+diamant;Pierre précieuse très dure
+emeraude;Pierre précieuse verte
+rubis;Pierre précieuse rouge
+perle;Elle naît dans l'huître
+cristal;Verre très brillant
+metal;Fer ou cuivre par exemple
+fer;Métal des clous
+cuivre;Métal rouge
+bronze;Alliage des statues
+or;Métal précieux jaune
+argent;Métal précieux blanc
+plomb;Métal lourd et gris
+baguette;Pain long
+croissant;Viennoiserie en forme de lune
+raclette;Fromage fondu sur des pommes de terre
+fondue;Fromage fondu au caquelon
+tartine;Tranche de pain beurrée
+cassoulet;Plat de haricots et de saucisses
+tempete;Violent coup de vent
+brouillard;Il réduit la visibilité
+tonnerre;Il gronde pendant l'orage
+eclair;Lueur de l'orage
+canicule;Forte chaleur
+inondation;Eau qui envahit les rues
+telescope;Il observe les étoiles
+microscope;Il grossit l'infiniment petit
+laboratoire;Lieu d'expériences
+experience;Test scientifique
+energie;Elle fait fonctionner les machines
+gravite;Elle nous retient au sol
+electricite;Elle alimente les lampes
+parapluie;Il protège de la pluie
+bicyclette;Autre nom du vélo
+chocolatier;Il fabrique des chocolats
+papillon;Il sort d'une chenille
+coccinelle;Bête à bon Dieu
+libellule;Insecte aux ailes transparentes
+chenille;Elle devient papillon
+sauterelle;Insecte sauteur vert
+grillon;Insecte chanteur nocturne
+cigale;Insecte chanteur de l'été
+scarabee;Coléoptère
