@@ -2,16 +2,16 @@
 
 Application Windows 100 % hors ligne qui regroupe des jeux simples. Pas de compte, pas de pub, pas de réseau.
 
-## V1 + V2 : 37 jeux
+## 62 jeux (V1 + V2 + V3)
 
 | Famille | Jeux |
 | --- | --- |
-| Cartes solo | Klondike, FreeCell, Spider (1, 2 ou 4 couleurs), Pyramide |
-| Cartes contre l'ordi | Bataille, 8 américain, Menteur, Mistigri, Pouilleux |
-| Puzzles | Sudoku (4 niveaux), Démineur, 2048, Taquin, Mahjong solitaire, Picross, Sokoban (40 niveaux), Tours de Hanoï, Lights Out, Flood-It, Binairo |
-| Mots | Pendu, Mots mêlés, Motus |
-| Contre l'ordi | Morpion, Puissance 4, Dames, Reversi |
-| Arcade | Snake, Tetris, Casse-briques, Pong |
+| Cartes solo | Klondike, FreeCell, Spider (1, 2 ou 4 couleurs), Pyramide, Golf, Tri-Peaks, Scorpion, Yukon |
+| Cartes contre l'ordi | Bataille, Scopa, Président, Belote, Tarot, Rami, Crapette, 8 américain, Menteur, Mistigri, Pouilleux |
+| Puzzles | Sudoku (4 niveaux), Démineur, 2048, Taquin, Mahjong solitaire, Picross, Sokoban (40 niveaux), Tours de Hanoï, Lights Out, Flood-It, Binairo, Kakuro, Futoshiki, Hitori, Nurikabe |
+| Mots | Pendu, Mots croisés (120 grilles), Mots mêlés, Motus, Anagrammes, Boggle, Le mot le plus long |
+| Contre l'ordi | Morpion, Puissance 4, Dames, Reversi, Échecs, Backgammon, Bataille navale, Mastermind |
+| Arcade | Snake, Tetris, Casse-briques, Pong, Space Invaders, Pac-Man (like), Flappy (like) |
 | Hasard et mémoire | Yams, Farkle, Memory, Simon, Pierre-feuille-ciseaux, Pile ou face |
 
 Fonctions communes : menu avec recherche, favoris et derniers joués · règles dans chaque jeu · sauvegarde automatique des parties en cours · annuler le dernier coup quand c'est pertinent · scores et statistiques · thème clair/sombre · sons synthétisés (désactivables) · export/import des données entre deux PC.
@@ -33,4 +33,6 @@ npm test             # tests de la logique des jeux
 npm run tauri build  # installateur
 ```
 
-Voir `CLAUDE.md` pour l'architecture et la marche à suivre pour ajouter un jeu, et `CAHIER.md` pour le cahier des charges (V3 : jeux restants, mots croisés).
+Données générées par script (voir `scripts/`) : `node scripts/construire-dictionnaire.mjs` (dictionnaires Pendu/Motus et validation des mots) et `node scripts/construire-mots-croises.mjs` (grilles de mots croisés vérifiées). Pour enrichir les mots croisés ou le dictionnaire, il suffit d'ajouter des lignes dans `scripts/definitions.txt` ou `scripts/mots-communs.txt`, puis de relancer les scripts.
+
+Voir `CLAUDE.md` pour l'architecture et la marche à suivre pour ajouter un jeu, et `CAHIER.md` pour le cahier des charges.
