@@ -53,3 +53,56 @@
 .mc-defs h2 { font-size: 0.95rem; color: var(--muet); margin-bottom: 4px; }
 .mc-def { text-align: left; background: transparent; border: none; padding: 3px 6px; border-radius: 6px; cursor: pointer; font-size: 0.9rem; }
 .mc-def.actif { background: color-mix(in srgb, var(--accent) 25%, var(--surface)); }
+
+/* Contre l'ordi V3 */
+.mm-plateau { display: flex; flex-direction: column; gap: 6px; background: #5a3e24; padding: 10px; border-radius: 12px; }
+.mm-ligne { display: flex; align-items: center; gap: 8px; padding: 4px 8px; border-radius: 8px; }
+.mm-ligne.courante { background: rgba(255, 255, 255, 0.18); }
+.mm-num { width: 20px; color: #f0e2c8; font-size: 0.8rem; text-align: right; }
+.mm-pion { width: 34px; height: 34px; border-radius: 50%; border: 2px solid rgba(0, 0, 0, 0.35); cursor: pointer; padding: 0; box-shadow: inset 0 -3px 5px rgba(0, 0, 0, 0.3); }
+.mm-pion.vide { background: rgba(0, 0, 0, 0.35); box-shadow: none; }
+.mm-pion:disabled { cursor: default; }
+.mm-retour { display: grid; grid-template-columns: repeat(3, 12px); gap: 3px; margin-left: 8px; }
+.mm-peg { width: 12px; height: 12px; border-radius: 50%; background: rgba(0, 0, 0, 0.35); }
+.mm-peg.noir { background: #111; box-shadow: 0 0 0 1px #888; }
+.mm-peg.blanc { background: #f5f5f5; }
+.bn-zone { display: flex; gap: 24px; flex-wrap: wrap; justify-content: center; }
+.bn-titre { font-size: 0.95rem; color: var(--muet); margin-bottom: 4px; text-align: center; }
+.bn-grille { display: grid; gap: 1px; width: min(340px, 92vw); background: #1d3f66; padding: 2px; border-radius: 8px; }
+.bn-ent { font-size: 0.65rem; color: #cde; text-align: center; align-self: center; }
+.bn-case { aspect-ratio: 1; border: none; padding: 0; background: #2f6da8; color: #fff; font-size: 0.9rem; line-height: 1; cursor: pointer; }
+.bn-case:disabled { cursor: default; }
+.adverse .bn-case:not(:disabled):hover { background: #4c8fd0; }
+.bn-case.navire { background: #7d8b99; }
+.bn-case.eau { background: #1f4e82; color: #8fb8e6; }
+.bn-case.touche { background: #c0392b; }
+.bn-case.coule { background: #6b1d14; }
+.bg-plateau { display: flex; flex-direction: column; gap: 6px; background: #3b2a1c; padding: 10px; border-radius: 12px; width: min(720px, 96vw); }
+.bg-rang { display: flex; gap: 2px; align-items: stretch; }
+.bg-barre-sep { width: 22px; background: #2a1d12; border-radius: 4px; flex: none; }
+.bg-point { flex: 1; min-height: 150px; display: flex; flex-direction: column; align-items: center; padding: 4px 0; border: none; cursor: pointer; clip-path: polygon(0 0, 100% 0, 50% 100%); gap: 1px; min-width: 0; }
+.bg-point.haut { justify-content: flex-start; }
+.bg-point.bas { justify-content: flex-end; clip-path: polygon(50% 0, 100% 100%, 0 100%); }
+.bg-point.fonce { background: #8b3a2b; }
+.bg-point.clair { background: #d9b97a; }
+.bg-point.jouable { filter: brightness(1.25); }
+.bg-point.choisi { outline: 3px solid #ffcc00; }
+.bg-point.cible { filter: brightness(1.5) saturate(1.5); }
+.bg-point:disabled { cursor: default; }
+.bg-pion { width: 70%; max-width: 36px; aspect-ratio: 1; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.8rem; font-weight: 700; box-shadow: 0 2px 3px rgba(0, 0, 0, 0.5); flex: none; }
+.bg-pion.b { background: #f5f0e4; color: #333; border: 2px solid #c8bfa5; }
+.bg-pion.n { background: #2a2a2a; color: #ddd; border: 2px solid #555; }
+.bg-milieu { display: flex; align-items: center; justify-content: center; min-height: 50px; }
+.de-mini { font-size: 2.6rem; line-height: 1; color: #f5f0e4; }
+.de-mini.utilise { opacity: 0.3; }
+.ec-plateau { display: grid; grid-template-columns: repeat(8, 1fr); width: min(520px, 94vw); border: 4px solid #5a3e24; }
+.ec-case { aspect-ratio: 1; border: none; padding: 0; background: #f0d9b5; display: flex; align-items: center; justify-content: center; cursor: default; position: relative; }
+.ec-case.sombre { background: #b58863; }
+.ec-case.dernier { box-shadow: inset 0 0 0 4px rgba(255, 215, 0, 0.55); }
+.ec-case.choisie { background: #d4b24c; }
+.ec-case.cible { cursor: pointer; }
+.ec-case.echec { background: #e0584a; }
+.ec-case:not(:disabled) { cursor: pointer; }
+.ec-piece { font-size: clamp(1.8rem, 8vw, 3.2rem); line-height: 1; }
+.ec-piece.blanche { color: #fff; text-shadow: 0 0 2px #000, 0 0 2px #000, 0 0 3px #000; }
+.ec-piece.noire { color: #1a1a1a; text-shadow: 0 0 1px #fff; }
