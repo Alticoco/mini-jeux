@@ -1,3 +1,4 @@
+import type { Mode } from '../../shared/mode';
 export const L = 640;
 export const H = 400;
 export const PH = 80; // hauteur des raquettes
@@ -13,10 +14,12 @@ export interface Etat {
   servir: boolean; // balle au centre, en attente
   vers: 1 | -1; // direction du prochain service (1 = vers l'ordinateur)
   fini: boolean;
+  /** Absent = contre l'ordinateur (anciennes sauvegardes). En mode « deux », `ordiY` est la raquette du joueur 2. */
+  mode?: Mode;
 }
 
-export function nouvelle(): Etat {
-  return { balle: { x: L / 2, y: H / 2, vx: 0, vy: 0 }, joueurY: H / 2, ordiY: H / 2, scores: [0, 0], servir: true, vers: 1, fini: false };
+export function nouvelle(mode: Mode = 'ordi'): Etat {
+  return { balle: { x: L / 2, y: H / 2, vx: 0, vy: 0 }, joueurY: H / 2, ordiY: H / 2, scores: [0, 0], servir: true, vers: 1, fini: false, mode };
 }
 
 export const VITESSE_ORDI = { facile: 170, moyen: 250, difficile: 340 } as const;
@@ -36,15 +39,21 @@ export function deplacerJoueur(e: Etat, y: number): void {
 
 export interface Evenements { rebond: boolean; point: 'joueur' | 'ordi' | null }
 
+export function deplacerJoueur2(e: Etat, y: number): void {
+  e.ordiY = Math.min(H - PH / 2, Math.max(PH / 2, y));
+}
+
 export function avancer(e: Etat, dt: number, niveau: keyof typeof VITESSE_BALLE): Evenements {
   const ev: Evenements = { rebond: false, point: null };
   if (e.fini) return ev;
   const b = e.balle;
-  // ordinateur : suit la balle quand elle vient vers lui, sinon revient au centre
-  const cible = !e.servir && b.vx > 0 ? b.y : H / 2;
-  const maxPas = VITESSE_ORDI[niveau] * dt;
-  e.ordiY += Math.max(-maxPas, Math.min(maxPas, cible - e.ordiY));
-  e.ordiY = Math.min(H - PH / 2, Math.max(PH / 2, e.ordiY));
+  if (e.mode !== 'deux') {
+    // ordinateur : suit la balle quand elle vient vers lui, sinon revient au centre
+    const cible = !e.servir && b.vx > 0 ? b.y : H / 2;
+    const maxPas = VITESSE_ORDI[niveau] * dt;
+    e.ordiY += Math.max(-maxPas, Math.min(maxPas, cible - e.ordiY));
+    e.ordiY = Math.min(H - PH / 2, Math.max(PH / 2, e.ordiY));
+  }
   if (e.servir) return ev;
   b.x += b.vx * dt;
   b.y += b.vy * dt;
