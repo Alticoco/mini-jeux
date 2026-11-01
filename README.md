@@ -2,7 +2,7 @@
 
 Application Windows 100 % hors ligne qui regroupe des jeux simples. Pas de compte, pas de pub, pas de réseau.
 
-## 62 jeux (V1 + V2 + V3)
+## 64 jeux (V1 + V2 + V3 + V4)
 
 | Famille | Jeux |
 | --- | --- |
@@ -11,8 +11,10 @@ Application Windows 100 % hors ligne qui regroupe des jeux simples. Pas de compt
 | Puzzles | Sudoku (4 niveaux), Démineur, 2048, Taquin, Mahjong solitaire, Picross, Sokoban (40 niveaux), Tours de Hanoï, Lights Out, Flood-It, Binairo, Kakuro, Futoshiki, Hitori, Nurikabe |
 | Mots | Pendu, Mots croisés (120 grilles), Mots mêlés, Motus, Anagrammes, Boggle, Le mot le plus long |
 | Contre l'ordi | Morpion, Puissance 4, Dames, Reversi, Échecs, Backgammon, Bataille navale, Mastermind |
-| Arcade | Snake, Tetris, Casse-briques, Pong, Space Invaders, Pac-Man (like), Flappy (like) |
-| Hasard et mémoire | Yams, Farkle, Memory, Simon, Pierre-feuille-ciseaux, Pile ou face |
+| Arcade | Snake, Tetris, Casse-briques, Pong, Space Invaders, Pac-Man (like), Flappy (like), Réflexe (2 à 4 joueurs) |
+| Hasard et mémoire | Yams, Farkle, Memory, Simon, Pierre-feuille-ciseaux, Pile ou face, Cochon (2 à 4 joueurs) |
+
+Mode **À deux** (même PC, sans statistiques) : Morpion, Puissance 4, Dames, Reversi, Échecs, Pong.
 
 Fonctions communes : menu avec recherche, favoris et derniers joués · règles dans chaque jeu · sauvegarde automatique des parties en cours · annuler le dernier coup quand c'est pertinent · scores et statistiques · thème clair/sombre · sons synthétisés (désactivables) · export/import des données entre deux PC.
 

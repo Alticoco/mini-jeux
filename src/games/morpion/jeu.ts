@@ -1,11 +1,15 @@
 import type { ContexteJeu, Difficulte, Jeu } from '../../core/types';
 import { el, vider } from '../../shared/dom';
+import { selecteurMode, type Mode } from '../../shared/mode';
 import { coupOrdi, gagnant, plein, type Case } from './logique';
 
 interface Etat {
   plateau: Case[];
   niveau: Difficulte;
   fini: boolean;
+  mode?: Mode;
+  /** Mode à deux : marque qui joue. */
+  tour?: 'X' | 'O';
 }
 
 let ctx: ContexteJeu | null = null;
@@ -14,8 +18,8 @@ let attente: Etat | null = null;
 let minuteur: number | undefined;
 let tourOrdi = false;
 
-function neuf(niveau: Difficulte): Etat {
-  return { plateau: Array<Case>(9).fill(null), niveau, fini: false };
+function neuf(niveau: Difficulte, mode: Mode = 'ordi'): Etat {
+  return { plateau: Array<Case>(9).fill(null), niveau, fini: false, mode, tour: 'X' };
 }
 
 function verifierFin(): boolean {
@@ -23,13 +27,22 @@ function verifierFin(): boolean {
   const g = gagnant(etat.plateau);
   if (!g && !plein(etat.plateau)) return false;
   etat.fini = true;
-  ctx.terminer({ victoire: g?.marque === 'X' });
-  ctx.jouerSon(g ? (g.marque === 'X' ? 'gagne' : 'perdu') : 'pose');
+  if (etat.mode !== 'deux') ctx.terminer({ victoire: g?.marque === 'X' });
+  ctx.jouerSon(g ? (g.marque === 'X' || etat.mode === 'deux' ? 'gagne' : 'perdu') : 'pose');
   return true;
 }
 
 function jouer(i: number): void {
   if (!etat || !ctx || etat.fini || tourOrdi || etat.plateau[i]) return;
+  if (etat.mode === 'deux') {
+    etat.plateau[i] = etat.tour ?? 'X';
+    etat.tour = etat.tour === 'O' ? 'X' : 'O';
+    ctx.jouerSon('clic');
+    verifierFin();
+    dessiner();
+    ctx.sauvegardeAuto();
+    return;
+  }
   etat.plateau[i] = 'X';
   ctx.jouerSon('clic');
   if (!verifierFin()) {
@@ -63,14 +76,18 @@ function dessiner(): void {
       }, c ?? ''),
     );
   });
-  const niveaux = el('div', { class: 'choix' }, el('span', {}, 'Niveau :'),
+  const deux = e.mode === 'deux';
+  const niveaux = deux ? el('div') : el('div', { class: 'choix' }, el('span', {}, 'Niveau :'),
     ...(['facile', 'moyen', 'difficile'] as Difficulte[]).map((n) =>
       el('button', { class: `btn${n === e.niveau ? ' actif' : ''}`, onclick: () => { ctx!.options.difficulte = n; jeuMorpion.nouvellePartie(); } }, n[0]!.toUpperCase() + n.slice(1))));
-  const msg = e.fini ? (g ? (g.marque === 'X' ? 'Bravo, vous avez gagné !' : "L'ordinateur a gagné.") : 'Match nul.') : 'À vous de jouer (X).';
+  const msg = deux
+    ? (e.fini ? (g ? `Les ${g.marque} ont gagné !` : 'Match nul.') : `Au tour des ${e.tour ?? 'X'}.`)
+    : e.fini ? (g ? (g.marque === 'X' ? 'Bravo, vous avez gagné !' : "L'ordinateur a gagné.") : 'Match nul.') : 'À vous de jouer (X).';
   vider(ctx.conteneur);
   ctx.conteneur.append(
+    selecteurMode(e.mode ?? 'ordi', (m) => { window.clearTimeout(minuteur); tourOrdi = false; etat = neuf(ctx!.options.difficulte, m); dessiner(); ctx!.sauvegardeAuto(); }),
     niveaux,
-    el('div', { class: `message${e.fini ? (g?.marque === 'X' ? ' gagne' : g ? ' perdu' : '') : ''}`, role: 'status' }, msg),
+    el('div', { class: `message${e.fini ? (g ? (deux || g.marque === 'X' ? ' gagne' : ' perdu') : '') : ''}`, role: 'status' }, msg),
     grille,
   );
 }
@@ -80,8 +97,8 @@ export const jeuMorpion: Jeu = {
   nom: 'Morpion',
   famille: 'Contre l\'ordi',
   icone: '⭕',
-  description: 'Alignez 3 croix avant l\'ordinateur.',
-  regles: '<p>Vous jouez les <b>X</b>, l\'ordinateur les <b>O</b>. Chacun pose sa marque à tour de rôle.</p><p>Le premier qui aligne <b>3 marques</b> (ligne, colonne ou diagonale) gagne. Si la grille est pleine sans alignement, c\'est match nul.</p><p>Le niveau (facile, moyen, difficile) règle la force de l\'ordinateur.</p>',
+  description: 'Alignez 3 croix avant l\'ordinateur ou à deux.',
+  regles: '<p>Choisissez <b>Contre l\'ordinateur</b> ou <b>À deux</b> (même PC, chacun son tour).</p><p>Contre l\'ordinateur, vous jouez les <b>X</b>, l\'ordinateur les <b>O</b>. Chacun pose sa marque à tour de rôle.</p><p>Le premier qui aligne <b>3 marques</b> (ligne, colonne ou diagonale) gagne. Si la grille est pleine sans alignement, c\'est match nul.</p><p>Le niveau (facile, moyen, difficile) règle la force de l\'ordinateur.</p>',
   demarrer(c) {
     ctx = c;
     etat = attente ?? neuf(c.options.difficulte);
@@ -107,7 +124,7 @@ export const jeuMorpion: Jeu = {
     if (!ctx) return;
     window.clearTimeout(minuteur);
     tourOrdi = false;
-    etat = neuf(ctx.options.difficulte);
+    etat = neuf(ctx.options.difficulte, etat?.mode ?? 'ordi');
     dessiner();
   },
 };

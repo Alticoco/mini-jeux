@@ -1,0 +1,15 @@
+/* V4 : jeux à plusieurs sur le même PC */
+.cochon-scores, .reflexe-scores { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin: 12px 0; }
+.cochon-joueur, .reflexe-joueur { min-width: 110px; padding: 10px 14px; text-align: center; background: var(--surface); border: 2px solid var(--bord); border-radius: 10px; }
+.cochon-joueur.actif { border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent); }
+.cochon-joueur.gagnant, .reflexe-joueur.gagnant { border-color: var(--ok); box-shadow: 0 0 0 3px var(--ok); }
+.cochon-nom, .reflexe-nom { font-weight: 700; }
+.cochon-total, .reflexe-total { font-size: 2rem; font-weight: 700; color: var(--accent); }
+.cochon-de { font-size: 5rem; line-height: 1; text-align: center; margin: 8px 0; }
+.cochon-noms { display: flex; flex-direction: column; gap: 8px; align-items: center; margin: 12px 0; }
+.cochon-champ { width: min(260px, 90vw); padding: 8px 10px; font-size: 1rem; border: 2px solid var(--bord); border-radius: 8px; background: var(--surface); color: var(--texte); }
+.reflexe-touche { color: var(--muet); font-size: 0.9rem; }
+.reflexe-zone { margin: 12px auto; width: min(520px, 94vw); height: 180px; display: flex; align-items: center; justify-content: center; font-size: 2rem; font-weight: 700; color: #fff; border-radius: 14px; background: var(--surface2); }
+.reflexe-zone.repos { color: var(--texte); }
+.reflexe-zone.rouge { background: #c0392b; }
+.reflexe-zone.vert { background: #1e9e4a; }
